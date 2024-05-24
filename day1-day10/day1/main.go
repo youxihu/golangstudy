@@ -17,7 +17,9 @@ var (
 
 func main() {
 	//VarStudy()
-	TypeStudy()
+	//TypeStudy()
+	//calculate()
+	ForScanLn()
 }
 
 func VarStudy() {
@@ -145,6 +147,13 @@ func TypeStudy() {
 	fmt.Printf("w3对应的类型是:%T, 值是:%q\n", w3, w3)
 	var w4 string = fmt.Sprintf("%v", q4)
 	fmt.Printf("w4对应的类型是:%T, 值是:%q\n", w4, w4)
+
+	//交换两个数并输出结果
+	var data1 int = 9
+	var data2 int = 3
+	data1, data2 = data2, data1
+	fmt.Println("data1:", data1)
+	fmt.Println("data2:", data2)
 	//复杂数据类型 派生数据类型
 	//指针
 	//数组
@@ -154,4 +163,51 @@ func TypeStudy() {
 	//切片
 	//接口
 	//map
+}
+
+func calculate() {
+	fmt.Println(1 + 2)
+	fmt.Println(2 - 1)
+	fmt.Println(3 * 4)
+	fmt.Println(4 / 2)
+	fmt.Println(3 % 2)
+	var num1 = (20+10)%3 + 7 - 6
+	fmt.Println(num1)
+	fmt.Println(5 == 9)
+	fmt.Println(5 != 9)
+	fmt.Println(5 > 9)
+	fmt.Println(5 < 9)
+	fmt.Println(5 >= 9)
+	fmt.Println(5 <= 9)
+	fmt.Println(true && true)
+	fmt.Println(true && false)
+	fmt.Println(false && true)
+	fmt.Println(false && false)
+	fmt.Println(true || true)
+	fmt.Println(true || false)
+	fmt.Println(false || false)
+	fmt.Println(false || true)
+	fmt.Println(!true)
+	fmt.Println(!false)
+	var un1 int = 18
+	var ptr *int = &un1
+	fmt.Println(ptr)
+	fmt.Println(*ptr)
+}
+
+func ForScanLn() {
+	var age int
+	//fmt.Println("请输入年龄")
+	//fmt.Scanln(&age)
+	var name string
+	//fmt.Println("请输入名字")
+	//fmt.Scanln(&name)
+	var score float32
+	//fmt.Println("请输入成绩")
+	//fmt.Scanln(&score)
+	//fmt.Println("录入成功")
+	//fmt.Printf("已录入成功，姓名:%v,年龄:%v,成绩:%v", name, age, score)
+	fmt.Println("请录入学生的姓名、年龄、成绩，用空格隔开")
+	fmt.Scanf("%s %d %f", &name, &age, &score)
+	fmt.Printf("已录入成功，姓名:%v,年龄:%v,成绩:%v", name, age, score)
 }
