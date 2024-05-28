@@ -14,8 +14,8 @@ func main() {
 	//calculate()
 	//while()
 	//jiaohuan()
-	testTest()
-
+	//testTest()
+	shiJan()
 }
 
 func processIfControl() {
@@ -155,4 +155,13 @@ func testTest() {
 	var num int = 10
 	test(num)
 	fmt.Println("testTest--------", num)
+}
+
+func shiJan() {
+	now := time.Now()
+	//fmt.Printf("当前时间: %d-%d-%d, %d:%d:%d\n", now.Year(), now.Month(), now.Day(), now.Hour(), now.Minute(), now.Second())
+	detest2 := fmt.Sprintf("当前时间：%d-%d-%d, %d-%d-%d\n", now.Year(), now.Month(), now.Day(), now.Hour(), now.Minute(), now.Second())
+	//detest1 := now.Format("2006/1/2 15:04:05")
+	//fmt.Println(detest1)
+	fmt.Println(detest2)
 }
