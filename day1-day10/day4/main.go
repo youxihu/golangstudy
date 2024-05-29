@@ -10,7 +10,15 @@ func main() {
 	//cutFuncA()
 	//cutCopy()
 	//mapStudy()
-	mapRange()
+	//mapRange()
+	//map1Range()
+	//objectStudy()
+	//people1()
+	//people2()
+	//people3()
+	//people4()
+	student1()
+	p.test()
 }
 
 func makeFunc() {
@@ -93,4 +101,92 @@ func mapRange() {
 	for k, v := range map17 {
 		fmt.Printf("map的key:%v,map的value:%v\n", k, v)
 	}
+}
+
+func map1Range() {
+	example1 := make(map[string]interface{})
+	example1["yxh"] = 1
+	example1["xh"] = 2
+	fmt.Println(example1)
+	classroom := make(map[int]map[int]string)
+	classroom[1] = make(map[int]string, 3)
+	classroom[1][1] = "yxh"
+	classroom[1][2] = "zy"
+	classroom[1][3] = "zzc"
+	fmt.Println(classroom)
+	for k1, v1 := range classroom {
+		for k2, v2 := range v1 {
+			fmt.Printf("k1是:%v,k2是:%v,v2是:%v\n", k1, k2, v2)
+		}
+	}
+}
+
+func objectStudy() {
+	var name = []string{"yxh", "zzc", "zy"}
+	handsomeName := name[1:3]
+	fmt.Println(name)
+	fmt.Println(handsomeName)
+}
+
+// 自定义结构体
+type People struct {
+	Name   string
+	Age    int
+	School string
+	Sexy   string
+}
+
+func people1() {
+	var p1 People
+	fmt.Println(p1)
+	p1.Name = "youxihu"
+	p1.Age = 20
+	p1.School = "清华大学"
+	fmt.Println(p1)
+}
+
+func people2() {
+	var p2 = People{"youxihu", 22, "清华大学", "男"}
+	fmt.Println(p2)
+}
+func people3() {
+	var p3 *People = new(People)
+	p3.Name = "youxihu"
+	p3.Age = 20
+	p3.School = "清华大学"
+	p3.Sexy = "男"
+	fmt.Println(*p3)
+}
+
+func people4() {
+	var p4 *People = &People{}
+	p4.Name = "youxihu"
+	p4.Age = 20
+	fmt.Println(*p4)
+}
+
+// 结构体转换
+type student struct {
+	age int
+}
+type Stu student
+
+func student1() {
+	var s1 = student{19}
+	var s2 = Stu{20}
+	fmt.Println(s1, s2)
+	s1 = student(s2)
+	fmt.Println(s1)
+	fmt.Println(s2)
+}
+
+// 方法
+type person struct {
+	Name string
+}
+
+func (p person) test() {
+	var p person
+	p.Name = "youxihu"
+	fmt.Println(p.Name)
 }
