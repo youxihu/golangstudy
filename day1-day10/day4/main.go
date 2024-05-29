@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"gogo/day1-day10/day4/damo"
 )
 
 func main() {
@@ -17,8 +18,11 @@ func main() {
 	//people2()
 	//people3()
 	//people4()
-	student1()
-	p.test()
+	//student1()
+	//test()
+	//damo.ShiYon()
+	damo.AccountFuncFunc()
+	damo.Admin()
 }
 
 func makeFunc() {
@@ -185,8 +189,12 @@ type person struct {
 	Name string
 }
 
-func (p person) test() {
+func (p person) call() {
+	fmt.Println(p.Name)
+}
+
+func test() {
 	var p person
 	p.Name = "youxihu"
-	fmt.Println(p.Name)
+	p.call()
 }
