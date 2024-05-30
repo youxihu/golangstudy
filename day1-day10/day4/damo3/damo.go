@@ -1,14 +1,5 @@
-package damo
+package main
 
-// 封装
+func main() {
 
-type exampleFZ struct {
-	name string
-	age  int
-}
-
-func FenPackage(name string) *exampleFZ {
-	return &exampleFZ{
-		name: name,
-	}
 }
