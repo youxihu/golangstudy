@@ -1,5 +1,7 @@
 package main
 
+import "gogo/day1-day10/day8/studyclient"
+
 func main() {
 	//studygoroutine.FiveGoroutines()
 	//studylock.Cal()
@@ -9,4 +11,6 @@ func main() {
 	//studychannel.CloseChannel()
 	//studychannel.RangeChannel()
 	//goroutineChannel.CatWriteRead()
+	studyclient.CreateServer()
+	studyclient.CreateClient()
 }
